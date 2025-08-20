@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD. Sajjad Islam - Digital Marketing Manager Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #000;
+            background-color: #fff;
+            line-height: 1.5;
+        }
+        .resume-container {
+            width: 2100px;
+            min-height: 3000px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 30px;
+        }
+        .name {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        .title {
+            font-size: 32px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #333;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            font-size: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact-item i {
+            color: #333;
+        }
+        .contact-item a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-item a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 30px 0 20px 0;
+            text-transform: uppercase;
+            color: #000;
+            position: relative;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #333;
+        }
+        .summary {
+            font-size: 20px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.5;
+        }
+        .experience-item, .volunteer-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .job-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        .company {
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .date {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #555;
+            font-weight: 600;
+        }
+        .job-description {
+            margin-left: 25px;
+        }
+        .job-description ul {
+            list-style-type: none;
+        }
+        .job-description li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .job-description li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #333;
+            font-size: 20px;
+            line-height: 18px;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        .skill-category {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 0;
+            border: 1px solid #ddd;
+        }
+        .skill-category-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .skill-category-title i {
+            color: #333;
+        }
+        .skill-category ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-category li {
+            font-size: 16px;
+            background-color: #fff;
+            padding: 6px 12px;
+            border-radius: 0;
+            color: #000;
+            border: 1px solid #ddd;
+            font-weight: 600;
+        }
+        .education-item {
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 0;
+            border: 1px solid #ddd;
+        }
+        .degree {
+            font-size: 22px;
+            font-weight: 700;
+            color: #000;
+        }
+        .institution {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .edu-date {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 600;
+        }
+        .group {
+            font-size: 14px;
+            font-style: italic;
+            color: #555;
+        }
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .certification-item {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 0;
+            border: 1px solid #ddd;
+            transition: transform 0.2s;
+        }
+        .certification-item:hover {
+            transform: translateY(-3px);
+        }
+        .cert-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 6px;
+        }
+        .provider {
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #333;
+            font-weight: 600;
+        }
+        .cert-date {
+            font-size: 12px;
+            color: #555;
+        }
+        .cert-id {
+            font-size: 12px;
+            color: #555;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .cert-id a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .cert-id a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+        .additional-volunteer {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #333;
+            border-radius: 0;
+        }
+        .additional-volunteer-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #000;
+        }
+        .additional-volunteer p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .additional-volunteer p::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #333;
+            font-size: 20px;
+            line-height: 18px;
+        }
+        .highlight-cert {
+            border: 2px solid #333;
+            position: relative;
+        }
+        .highlight-cert::after {
+            content: 'Featured';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 0;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .volunteer-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        .volunteer-column {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="name">MD. Sajjad Islam</div>
+            <div class="title">Digital Marketing Manager</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="material-icons">email</i>
+                    <a href="mailto:sharian.saju@gmail.com">sharian.saju@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="material-icons">phone</i>
+                    <a href="tel:+8801942488252">+8801942488252</a>
+                </div>
+                <div class="contact-item">
+                    <i class="material-icons">link</i>
+                    <a href="https://www.linkedin.com/in/shariansaju" target="_blank">linkedin.com/in/shariansaju</a>
+                </div>
+                <div class="contact-item">
+                    <i class="material-icons">location_on</i>
+                    Wari, Dhaka - Bangladesh
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Summary Section -->
+        <div class="section-title">Professional Summary</div>
+        <div class="summary">
+            Digital marketing manager with over 7 years of experience in creating and executing successful marketing strategies to drive business growth. Proven track record of boosting brand awareness and product engagement through targeted campaigns and events. Skilled in using data analysis and market research to identify opportunities and trends, and leading cross-functional teams to execute campaigns on time and within budget. Experienced in managing budgets and using digital marketing tools to improve ROI.
+        </div>
+
+        <!-- Professional Experience Section -->
+        <div class="section-title">Professional Experience</div>
+        
+        <div class="experience-item">
+            <div class="job-title">Leader of SEM & SMM | Digital Marketing Manager</div>
+            <div class="company">ScaleUp Ads Agency (Betopia Group)</div>
+            <div class="date">November 2024 – Present</div>
+            <div class="job-description">
+                <ul>
+                    <li>Promoted to Team Leader after three months</li>
+                    <li>Spearheaded 300+ digital marketing projects</li>
+                    <li>Led high-performing Social Media Marketing team</li>
+                    <li>Managed SEM campaigns (Google Ads, YouTube)</li>
+                    <li>Directed SMM campaigns (Meta, TikTok)</li>
+                    <li>Optimized campaign performance and ROI</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Marketing Manager & KOL Management</div>
+            <div class="company">SHANGHAI MOONTON TECHNOLOGY CO., LTD (MOONTON Games)</div>
+            <div class="date">Feb 2022 – Jun 2024</div>
+            <div class="job-description">
+                <ul>
+                    <li>Trade show and event planning and management</li>
+                    <li>Marketing strategy development</li>
+                    <li>Influencer marketing and management</li>
+                    <li>Campaign planning and execution</li>
+                    <li>Market research and analysis</li>
+                    <li>Content marketing and budget management</li>
+                    <li>Cross-functional team leadership</li>
+                    <li>Digital marketing and social media management</li>
+                    <li>Customer engagement and creative problem-solving</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Marketing Manager & Moderator</div>
+            <div class="company">BIGO TECHNOLOGY PTE. LTD.</div>
+            <div class="date">2019 – 2022</div>
+            <div class="job-description">
+                <ul>
+                    <li>Marketing strategy development and implementation</li>
+                    <li>In-app system management and moderation</li>
+                    <li>Influencer marketing and campaign planning</li>
+                    <li>Market research and analysis</li>
+                    <li>Budget management and cost control</li>
+                    <li>Cross-functional team leadership</li>
+                    <li>Digital marketing and social media management</li>
+                    <li>Customer engagement and copywriting</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Volunteer Experience Section -->
+        <div class="section-title">Volunteer Experience</div>
+        
+        <div class="volunteer-container">
+            <div class="volunteer-column">
+                <div class="job-title">Volunteer Marketing Manager</div>
+                <div class="company">Vivo Bangladesh</div>
+                <div class="date">2021</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Managed team of 10 volunteers</li>
+                        <li>Created product launch campaign</li>
+                        <li>Executed multi-channel marketing plan</li>
+                        <li>Achieved 15% increase in sales</li>
+                        <li>Collaborated with social media influencers</li>
+                        <li>Trained and mentored junior volunteers</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="volunteer-column">
+                <div class="job-title">Volunteer Marketing Helper</div>
+                <div class="company">OPPO</div>
+                <div class="date">2021</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Created engaging content (blog, videos)</li>
+                        <li>Built relationships with influencers and media</li>
+                        <li>Collaborated with social media influencers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-volunteer">
+            <div class="additional-volunteer-title">Additional Volunteer & Partnership Work</div>
+            <p>Extensive volunteer works and partner projects completed as digital marketer, creating impactful campaigns and fostering brand partnerships.</p>
+            <p>Participated in numerous partner works and volunteer initiatives, leveraging digital marketing expertise to support brand initiatives.</p>
+        </div>
+
+        <!-- Skills & Expertise Section -->
+        <div class="section-title">Skills & Expertise</div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <div class="skill-category-title">
+                    <i class="material-icons">campaign</i>
+                    Marketing
+                </div>
+                <ul>
+                    <li>Strategy Development</li>
+                    <li>Campaign Planning</li>
+                    <li>Brand Management</li>
+                    <li>Customer Engagement</li>
+                    <li>Event Planning</li>
+                    <li>Influencer Marketing</li>
+                    <li>Content Strategy</li>
+                    <li>Growth Hacking</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">
+                    <i class="material-icons">analytics</i>
+                    Analytical
+                </div>
+                <ul>
+                    <li>Market Research</li>
+                    <li>Data Analysis</li>
+                    <li>ROI Optimization</li>
+                    <li>Performance Tracking</li>
+                    <li>A/B Testing</li>
+                    <li>Conversion Rate Optimization</li>
+                    <li>Predictive Analytics</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">
+                    <i class="material-icons">groups</i>
+                    Leadership
+                </div>
+                <ul>
+                    <li>Budget Management</li>
+                    <li>Team Leadership</li>
+                    <li>Marketing Automation</li>
+                    <li>CRM Management</li>
+                    <li>Strategic Planning</li>
+                    <li>Change Management</li>
+                    <li>Cross-functional Collaboration</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">
+                    <i class="material-icons">code</i>
+                    Technical
+                </div>
+                <ul>
+                    <li>Google Ads</li>
+                    <li>Google Analytics</li>
+                    <li>Google Tag Manager</li>
+                    <li>Looker Studio</li>
+                    <li>WordPress</li>
+                    <li>CRM</li>
+                    <li>GHL</li>
+                    <li>Meta Business Suite</li>
+                    <li>SEMrush</li>
+                    <li>HubSpot</li>
+                    <li>Mailchimp</li>
+                    <li>Canva</li>
+                    <li>Adobe Creative Suite</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section-title">Education</div>
+        
+        <div class="education-item">
+            <div class="degree">Higher Secondary School Certificate</div>
+            <div class="institution">Shaikh Burhanuddin Post Graduate College</div>
+            <div class="edu-date">2022</div>
+            <div class="group">Group: Arts and Humanities</div>
+        </div>
+        
+        <div class="education-item">
+            <div class="degree">Secondary School Certificate</div>
+            <div class="institution">Shaheed Smrity High School</div>
+            <div class="edu-date">2016</div>
+            <div class="group">Group: Arts and Humanities</div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="section-title">Certifications</div>
+        <div class="certifications-grid">
+            <div class="certification-item highlight-cert">
+                <div class="cert-name">Project Management</div>
+                <div class="provider">LinkedIn Learning</div>
+                <div class="cert-id">ID: <a href="https://www.linkedin.com/learning/certificates/d5acaf7faa583301be4410e09bc2ccdc69d36852067aaa847fdce21b87369fbf" target="_blank">d5acaf7faa583301be4410e09bc2ccdc69d36852067aaa847fdce21b87369fbf</a></div>
+            </div>
+            <div class="certification-item highlight-cert">
+                <div class="cert-name">Strategic Thinking</div>
+                <div class="provider">LinkedIn Learning</div>
+                <div class="cert-id">ID: <a href="https://www.linkedin.com/learning/certificates/3162b127a7dcf05bce2f8c4b6069f8456e9b0d230286a7dbed945f07995fb9fa" target="_blank">3162b127a7dcf05bce2f8c4b6069f8456e9b0d230286a7dbed945f07995fb9fa</a></div>
+            </div>
+            <div class="certification-item highlight-cert">
+                <div class="cert-name">Digital Marketing for Freelancing, Level-4</div>
+                <div class="provider">Government of Bangladesh - NSDA</div>
+                <div class="cert-id">ID: <a href="https://www.skillsportal.gov.bd/#/rpl/certificate-view?rplCandidateId=TT7blYkRqZ%2F6VtKNPQJLhA%3D%3D" target="_blank">TT7blYkRqZ%2F6VtKNPQJLhA%3D%3D</a></div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">Google Ads Search Certification</div>
+                <div class="provider">Google</div>
+                <div class="cert-date">2018</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">Google Ads Display Certification</div>
+                <div class="provider">Google</div>
+                <div class="cert-date">2018</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">Google Ads Video Certification</div>
+                <div class="provider">Google</div>
+                <div class="cert-date">2018</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">Google Analytics Individual Qualification</div>
+                <div class="provider">Google</div>
+                <div class="cert-date">2019</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">Meta Certified Digital Marketing Associate</div>
+                <div class="provider">Meta</div>
+                <div class="cert-date">2019</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">Meta Certified Media Buying Professional</div>
+                <div class="provider">Meta</div>
+                <div class="cert-date">2020</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">HubSpot Content Marketing Certification</div>
+                <div class="provider">HubSpot</div>
+                <div class="cert-date">2022</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">HubSpot Social Media Marketing Certification</div>
+                <div class="provider">HubSpot</div>
+                <div class="cert-date">2021</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">Microsoft Advertising Certification</div>
+                <div class="provider">Microsoft</div>
+                <div class="cert-date">2024</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
