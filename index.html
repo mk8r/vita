@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD. Sajjad Islam - Digital Marketing Manager Resume</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -19,11 +20,13 @@
             line-height: 1.5;
         }
         .resume-container {
-            width: 2100px;
+            width: 100%;
+            max-width: 2100px;
             min-height: 3000px;
             padding: 60px;
             display: flex;
             flex-direction: column;
+            margin: 0 auto;
         }
         .header {
             margin-bottom: 40px;
@@ -292,6 +295,191 @@
         .volunteer-column {
             flex: 1;
         }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .resume-container {
+                padding: 40px;
+            }
+            .name {
+                font-size: 48px;
+            }
+            .title {
+                font-size: 28px;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+            .summary {
+                font-size: 18px;
+            }
+            .job-title {
+                font-size: 22px;
+            }
+            .company {
+                font-size: 18px;
+            }
+            .date {
+                font-size: 16px;
+            }
+            .job-description li {
+                font-size: 16px;
+            }
+            .skill-category-title {
+                font-size: 20px;
+            }
+            .skill-category li {
+                font-size: 14px;
+            }
+            .degree {
+                font-size: 20px;
+            }
+            .institution {
+                font-size: 16px;
+            }
+            .cert-name {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 30px;
+                min-height: auto;
+            }
+            .name {
+                font-size: 36px;
+            }
+            .title {
+                font-size: 22px;
+            }
+            .contact-info {
+                font-size: 16px;
+                gap: 15px;
+            }
+            .section-title {
+                font-size: 20px;
+                margin: 20px 0 15px 0;
+            }
+            .summary {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            .experience-item, .volunteer-item {
+                margin-bottom: 20px;
+            }
+            .job-title {
+                font-size: 18px;
+            }
+            .company {
+                font-size: 16px;
+            }
+            .date {
+                font-size: 14px;
+            }
+            .job-description {
+                margin-left: 15px;
+            }
+            .job-description li {
+                font-size: 14px;
+                margin-bottom: 8px;
+                padding-left: 20px;
+            }
+            .job-description li::before {
+                font-size: 18px;
+            }
+            .skills-container {
+                gap: 15px;
+            }
+            .skill-category {
+                min-width: 100%;
+            }
+            .skill-category-title {
+                font-size: 18px;
+            }
+            .skill-category li {
+                font-size: 14px;
+            }
+            .education-item {
+                margin-bottom: 15px;
+            }
+            .degree {
+                font-size: 18px;
+            }
+            .institution {
+                font-size: 16px;
+            }
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+            .cert-name {
+                font-size: 16px;
+            }
+            .volunteer-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .additional-volunteer-title {
+                font-size: 18px;
+            }
+            .additional-volunteer p {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .resume-container {
+                padding: 20px;
+            }
+            .name {
+                font-size: 32px;
+            }
+            .title {
+                font-size: 20px;
+            }
+            .contact-info {
+                font-size: 14px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+            .summary {
+                font-size: 15px;
+            }
+            .job-title {
+                font-size: 17px;
+            }
+            .company {
+                font-size: 15px;
+            }
+            .date {
+                font-size: 13px;
+            }
+            .job-description li {
+                font-size: 13px;
+            }
+            .skill-category-title {
+                font-size: 17px;
+            }
+            .degree {
+                font-size: 17px;
+            }
+            .institution {
+                font-size: 15px;
+            }
+            .cert-name {
+                font-size: 15px;
+            }
+            .additional-volunteer-title {
+                font-size: 17px;
+            }
+            .additional-volunteer p {
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -302,30 +490,30 @@
             <div class="title">Digital Marketing Manager</div>
             <div class="contact-info">
                 <div class="contact-item">
-                    <i class="material-icons">email</i>
+                    <i class="fas fa-envelope"></i>
                     <a href="mailto:sharian.saju@gmail.com">sharian.saju@gmail.com</a>
                 </div>
                 <div class="contact-item">
-                    <i class="material-icons">phone</i>
+                    <i class="fas fa-phone"></i>
                     <a href="tel:+8801942488252">+8801942488252</a>
                 </div>
                 <div class="contact-item">
-                    <i class="material-icons">link</i>
+                    <i class="fas fa-link"></i>
                     <a href="https://www.linkedin.com/in/shariansaju" target="_blank">linkedin.com/in/shariansaju</a>
                 </div>
                 <div class="contact-item">
-                    <i class="material-icons">location_on</i>
+                    <i class="fas fa-map-marker-alt"></i>
                     Wari, Dhaka - Bangladesh
                 </div>
             </div>
         </div>
-
+        
         <!-- Professional Summary Section -->
         <div class="section-title">Professional Summary</div>
         <div class="summary">
             Digital marketing manager with over 7 years of experience in creating and executing successful marketing strategies to drive business growth. Proven track record of boosting brand awareness and product engagement through targeted campaigns and events. Skilled in using data analysis and market research to identify opportunities and trends, and leading cross-functional teams to execute campaigns on time and within budget. Experienced in managing budgets and using digital marketing tools to improve ROI.
         </div>
-
+        
         <!-- Professional Experience Section -->
         <div class="section-title">Professional Experience</div>
         
@@ -344,7 +532,7 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="experience-item">
             <div class="job-title">Marketing Manager & KOL Management</div>
             <div class="company">SHANGHAI MOONTON TECHNOLOGY CO., LTD (MOONTON Games)</div>
@@ -363,7 +551,7 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="experience-item">
             <div class="job-title">Marketing Manager & Moderator</div>
             <div class="company">BIGO TECHNOLOGY PTE. LTD.</div>
@@ -381,7 +569,7 @@
                 </ul>
             </div>
         </div>
-
+        
         <!-- Volunteer Experience Section -->
         <div class="section-title">Volunteer Experience</div>
         
@@ -415,19 +603,19 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="additional-volunteer">
             <div class="additional-volunteer-title">Additional Volunteer & Partnership Work</div>
             <p>Extensive volunteer works and partner projects completed as digital marketer, creating impactful campaigns and fostering brand partnerships.</p>
             <p>Participated in numerous partner works and volunteer initiatives, leveraging digital marketing expertise to support brand initiatives.</p>
         </div>
-
+        
         <!-- Skills & Expertise Section -->
         <div class="section-title">Skills & Expertise</div>
         <div class="skills-container">
             <div class="skill-category">
                 <div class="skill-category-title">
-                    <i class="material-icons">campaign</i>
+                    <i class="fas fa-bullhorn"></i>
                     Marketing
                 </div>
                 <ul>
@@ -444,7 +632,7 @@
             
             <div class="skill-category">
                 <div class="skill-category-title">
-                    <i class="material-icons">analytics</i>
+                    <i class="fas fa-chart-line"></i>
                     Analytical
                 </div>
                 <ul>
@@ -460,7 +648,7 @@
             
             <div class="skill-category">
                 <div class="skill-category-title">
-                    <i class="material-icons">groups</i>
+                    <i class="fas fa-users"></i>
                     Leadership
                 </div>
                 <ul>
@@ -476,7 +664,7 @@
             
             <div class="skill-category">
                 <div class="skill-category-title">
-                    <i class="material-icons">code</i>
+                    <i class="fas fa-laptop-code"></i>
                     Technical
                 </div>
                 <ul>
@@ -496,7 +684,7 @@
                 </ul>
             </div>
         </div>
-
+        
         <!-- Education Section -->
         <div class="section-title">Education</div>
         
@@ -513,7 +701,7 @@
             <div class="edu-date">2016</div>
             <div class="group">Group: Arts and Humanities</div>
         </div>
-
+        
         <!-- Certifications Section -->
         <div class="section-title">Certifications</div>
         <div class="certifications-grid">
